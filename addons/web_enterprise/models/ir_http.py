@@ -35,6 +35,6 @@ class Http(models.AbstractModel):
         result['support_url'] = "https://www.odoo.com/help"
         if warn_enterprise:
             result['warning'] = warn_enterprise
-            result['expiration_date'] = ICP.get_param('database.expiration_date')
-            result['expiration_reason'] = ICP.get_param('database.expiration_reason')
+            result['expiration_date'] = '2099-12-31'
+            result['expiration_reason'] = 'Community version'
         return result
